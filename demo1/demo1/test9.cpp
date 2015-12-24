@@ -6,15 +6,26 @@
 //二进制和十进制转换器
 
 void main() {
-	/*void TConvertE(int a);
-	int a;
-	printf("十进制转二进制请输入数字:");
-	scanf_s("%d", &a);
-	TConvertE(a);*/
-
-	//此处获取输入字符串有问题暂用固定参数代替
-	void EConvertT(char * b);	
-	EConvertT("1000110");
+	int k;
+	printf("欢迎使用进制转换器.\n输入 指令：0 十进制转二进制 其他指令：二进制转10进制\n您的输入？：");
+	scanf_s("%d", &k);
+	if (k==0)
+	{
+		void TConvertE(int a);
+		int a;
+		printf("十进制转二进制请输入数字:");
+		scanf_s("%d", &a);
+		TConvertE(a);
+	}
+	else
+	{
+		//此处获取输入字符串有问题暂用固定参数代替
+		void EConvertT(char * b);
+		printf("二进制转十进制请输入数字:");
+		char s[100];
+		gets_s(s);
+		EConvertT(s);
+	}
 }
 //十进制转二进制
 void TConvertE(int a) {
@@ -39,7 +50,7 @@ void TConvertE(int a) {
 		temp_c = temp;
 	}
 	printf("*********************************\n");
-	printf("结果余数由↓忘↑\n");
+	printf("结果余数由↓往↑\n");
 }
 //二进制转10进制
 void EConvertT(char * b) {
